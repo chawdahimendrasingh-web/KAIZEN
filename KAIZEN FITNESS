@@ -368,8 +368,9 @@ section{position:relative}
 .trainer-overlay-name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;color:var(--text);margin-bottom:4px;}
 .trainer-overlay-role{font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border-green);}
 .trainer-bio{font-size:var(--fs-sm);color:var(--muted);line-height:1.75;margin-bottom:16px}
-.trainer-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(212,175,55,0.08);transform:translateY(14px);opacity:0;transition:all var(--t-std) 0.08s;margin-bottom:16px;border-radius:var(--r-sm);overflow:hidden;}
+.trainer-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(212,175,55,0.08);transform:translateY(14px);opacity:0;transition:all var(--t-std) 0.08s;margin-bottom:16px;border-radius:var(--r-sm);overflow:hidden;}
 .trainer-stat{background:rgba(8,10,9,0.92);padding:10px 6px;text-align:center}
+.trainer-stat:nth-child(3){grid-column:1/-1}
 .trainer-stat-num{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);display:block;line-height:1}
 .trainer-stat-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:3px;display:block}
 .trainer-specialties{display:flex;flex-wrap:wrap;gap:5px}
@@ -475,12 +476,6 @@ section{position:relative}
 /* ─── TRANSFORMATION GALLERY ─── */
 .transform-gallery{background:linear-gradient(180deg,rgba(17,24,22,0.96),rgba(8,10,9,0.92));padding:var(--sp-xl) 48px;overflow:hidden;border-top:1px solid var(--border-green);border-bottom:1px solid var(--border-green);}
 .transform-gallery-inner{max-width:1400px;margin:0 auto}
-.tg-tabs{display:flex;gap:0;margin-bottom:24px;border:1px solid var(--border-green);width:fit-content;border-radius:var(--r-sm);overflow:hidden;}
-.tg-tab{padding:10px 24px;font-size:var(--fs-xs);letter-spacing:3px;text-transform:uppercase;color:var(--muted);cursor:pointer;border:none;background:transparent;font-family:'DM Sans',sans-serif;transition:all var(--t-fast);font-weight:500;}
-.tg-tab:not(:last-child){border-right:1px solid var(--border-green)}
-.tg-tab.active{background:var(--gold);color:var(--black);font-weight:700}
-.tg-tab:hover:not(.active){color:var(--gold);background:rgba(212,175,55,0.06)}
-.tg-panel{display:none}.tg-panel.active{display:grid}
 .tg-grid-3{grid-template-columns:repeat(3,1fr);gap:2px}
 .tg-ba-card{position:relative;background:var(--black);border:1px solid var(--border-green);overflow:hidden;transition:border-color var(--t-fast);border-radius:var(--r-sm);}
 .tg-ba-card:hover{border-color:rgba(212,175,55,0.4)}
@@ -668,8 +663,9 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   .trainer-mobile-info .trainer-overlay-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text);margin-bottom:3px;}
   .trainer-mobile-info .trainer-overlay-role{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
   .trainer-mobile-info .trainer-bio{font-size:var(--fs-sm);color:var(--muted);line-height:1.65;margin-bottom:10px;}
-  .trainer-mobile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(212,175,55,0.08);margin-bottom:10px;border-radius:var(--r-sm);overflow:hidden;}
+  .trainer-mobile-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(212,175,55,0.08);margin-bottom:10px;border-radius:var(--r-sm);overflow:hidden;}
   .trainer-mobile-stat{background:var(--charcoal);padding:9px 5px;text-align:center}
+  .trainer-mobile-stat:nth-child(3){grid-column:1/-1}
   .trainer-mobile-stat-num{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--gold);display:block;line-height:1}
   .trainer-mobile-stat-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:3px;display:block}
   .trainer-mobile-tags{display:flex;flex-wrap:wrap;gap:5px}
@@ -688,8 +684,6 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   .gallery-item:nth-child(1) img{height:190px;min-height:190px !important}
   .gallery-item:nth-child(6){grid-column:span 2 !important}.lightbox-nav{display:none}
   .transform-gallery{padding:var(--sp-xl) 18px}
-  .tg-tabs{flex-wrap:wrap;width:100%;margin-bottom:20px;border-radius:var(--r-sm)}
-  .tg-tab{flex:1;min-width:calc(50% - 1px);text-align:center;padding:9px 14px;font-size:10px}
   .tg-stats-strip{grid-template-columns:repeat(2,1fr);margin-bottom:20px;border-radius:var(--r-sm)}
   .tg-grid-3{grid-template-columns:1fr}.tg-ba-split{height:200px}
   .tg-ba-result{font-size:22px}.tg-cta-row{margin-top:20px;padding-top:20px}
@@ -715,12 +709,9 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
   nav{padding:12px 14px}.logo-hex{width:32px;height:32px}
   .nav-logo-text{font-size:16px;letter-spacing:2.5px}.nav-logo-text span{font-size:10px;letter-spacing:1.8px}
   .hero-headline{font-size:34px}.stat-num{font-size:38px}
-  .trainer-mobile-stats{grid-template-columns:1fr}.review-card{width:88vw}
+  .review-card{width:88vw}
   .gallery-item img,.gallery-item:nth-child(1) img,.gallery-item:nth-child(6) img{height:120px;min-height:120px !important}
   .gallery-item:nth-child(1) img{height:158px;min-height:158px !important}
-  .tg-tabs{display:grid;grid-template-columns:1fr}
-  .tg-tab{min-width:0;border-right:0 !important;border-bottom:1px solid var(--border-green)}
-  .tg-tab:last-child{border-bottom:0}.tg-stats-strip{grid-template-columns:1fr}
   .tg-ba-info{display:block}.tg-ba-result{margin-top:10px}.tg-ba-result span{text-align:left}
   .trainer-img-wrap{height:240px}.footer-links{grid-template-columns:1fr}
 }
@@ -1090,18 +1081,10 @@ footer{background:linear-gradient(180deg,rgba(8,10,9,0.99),#040505);border-top:1
       <div class="tg-stat-box"><span class="tg-stat-num">8wks</span><span class="tg-stat-label">Avg. Visible Change</span></div>
       <div class="tg-stat-box"><span class="tg-stat-num">96%</span><span class="tg-stat-label">Member Satisfaction</span></div>
     </div>
-    <div class="tg-tabs reveal">
-      <button class="tg-tab active" onclick="switchTgTab(this,'fat-loss')">Fat Loss</button>
-      <button class="tg-tab" onclick="switchTgTab(this,'muscle-gain')">Muscle Gain</button>
-    </div>
-    
-    <div class="tg-panel active tg-grid-3" id="tg-fat-loss">
+    <div class="tg-grid-3 reveal" style="display:grid">
       <div class="tg-ba-card reveal"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&q=80" alt="Before" loading="lazy"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="After" loading="lazy"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Rohan K.</div><div class="tg-ba-meta">Bhopal · 3 Months · Performance Plan</div></div><div><div class="tg-ba-result">−12 kg</div><span>Fat Lost</span></div></div></div>
       <div class="tg-ba-card reveal" style="transition-delay:0.1s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Before" loading="lazy"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" alt="After" loading="lazy"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Priya S.</div><div class="tg-ba-meta">Awadhpuri · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">−15 kg</div><span>Fat Lost</span></div></div></div>
-    </div>
-    
-    <div class="tg-panel tg-grid-3" id="tg-muscle-gain">
-      <div class="tg-ba-card reveal"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Before" loading="lazy"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="After" loading="lazy"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
+      <div class="tg-ba-card reveal" style="transition-delay:0.2s"><div class="tg-ba-split"><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80" alt="Before" loading="lazy"><span class="tg-ba-label before">Before</span></div><div class="tg-ba-side"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="After" loading="lazy"><span class="tg-ba-label after">After</span></div><div class="tg-ba-divider"></div></div><div class="tg-ba-info"><div><div class="tg-ba-name">Amit J.</div><div class="tg-ba-meta">BHEL · 4 Months · Transformation Plan</div></div><div><div class="tg-ba-result">+8 kg</div><span>Muscle Gained</span></div></div></div>
     </div>
 
     <div class="tg-cta-row reveal">
@@ -1349,9 +1332,6 @@ function animateCounter(el,target){var start=0,step=target/80,timer=setInterval(
 var statsObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('[data-target]').forEach(function(n){animateCounter(n,parseInt(n.dataset.target))});statsObs.disconnect();}});},{threshold:0.5});
 var statsSection=document.querySelector('.stats');if(statsSection)statsObs.observe(statsSection);
 
-/* TABS */
-function switchTgTab(btn,tabId){document.querySelectorAll('.tg-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.tg-panel').forEach(function(p){p.classList.remove('active')});btn.classList.add('active');document.getElementById('tg-'+tabId).classList.add('active');}
-
 /* REVIEWS SCROLL */
 (function(){
   var viewport=document.getElementById('reviewsViewport');var track=document.getElementById('reviewsTrack');var prevBtn=document.getElementById('reviewsPrev');var nextBtn=document.getElementById('reviewsNext');var indicator=document.getElementById('reviewsAutoIndicator');
@@ -1374,7 +1354,7 @@ function switchTgTab(btn,tabId){document.querySelectorAll('.tg-tab').forEach(fun
   viewport.addEventListener('touchend',function(){scheduleResume();});
   viewport.addEventListener('scroll',function(){if(viewport.scrollLeft>=halfWidth)viewport.scrollLeft-=halfWidth;else if(viewport.scrollLeft<0)viewport.scrollLeft+=halfWidth;});
   prevBtn&&prevBtn.addEventListener('click',function(){stopAuto();viewport.scrollLeft-=CARD_W;if(viewport.scrollLeft<0)viewport.scrollLeft+=halfWidth;scheduleResume();});
-  nextBtn&&nextBtn.addEventListener('click',function(){stopAuto();viewport.scrollLeft+=CARD_W;if(viewport.scrollLeft>=halfWidth)viewport.scrollLeft-=halfWidth;scheduleResume();});	
+  nextBtn&&nextBtn.addEventListener('click',function(){stopAuto();viewport.scrollLeft+=CARD_W;if(viewport.scrollLeft>=halfWidth)viewport.scrollLeft-=halfWidth;scheduleResume();});
   viewport.addEventListener('mouseenter',function(){if(autoRunning){setAuto(false);clearTimeout(idleTimer);}});
   viewport.addEventListener('mouseleave',function(){if(!isDown)setAuto(true);});
   viewport.addEventListener('click',function(e){if(isDragging){e.stopPropagation();e.preventDefault();isDragging=false;}},true);
